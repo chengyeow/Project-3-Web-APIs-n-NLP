@@ -137,16 +137,14 @@ Random forests, a step beyond bagged decision trees, are very widely used classi
 
 Best Model selected for test data is Logistic Regression with TF-IDF as it offers the best validation score, the train score are also in a good range and does not show overfitting as compared to Random Forest or too low for Naive Bayes. The difference in the train and validate data for Logistic Regression with TF-IDF is also reasonably under 10.
 
-+--------------------------------------------+-------+-------+-------+-----------+-----+
 |                   Model                    | Train |  Val  |  Diff | Precision |  F1 |
-+--------------------------------------------+-------+-------+-------+-----------+-----+
+|--------------------------------------------|-------|-------|-------|-----------|-----|
 |      Naive Bayes with CountVectorize       | 92.7% | 87.9% |  -4.8 |   87.3%   | 88% |
 |          Naive Bayes with TF-IDF           | 95.2% | 87.9% |  -7.3 |   89.1%   | 88% |
 |  Logistic Regression with CountVectorize   | 97.5% | 86.8% | -10.7 |   88.8%   | 87% |
 |      Logistic Regression with TF-IDF       | 95.7% | 88.3% |  -7.4 |    92%    | 88% |
 | RandomForestClassifier with CountVectorize | 99.9% | 87.9% | -12.0 |   90.6%   | 88% |
 |     RandomForestClassifier with TF-IDF     | 99.5% | 86.0% | -13.5 |   89.4%   | 86% |
-+--------------------------------------------+-------+-------+-------+-----------+-----+
 
 
 The ROC curve shows the trade-off between sensitivity (or TPR) and specificity (1 – FPR). Classifiers that give curves closer to the top-left corner indicate a better performance. As a baseline, a random classifier is expected to give points lying along the diagonal (FPR = TPR). The closer the curve comes to the 45-degree diagonal of the ROC space, the less accurate the test. AUC is the area under the ROC curve.
@@ -162,10 +160,6 @@ Logistic Regression with TF-IDF was chosen as its validation score has the best 
 |---------------------------------|-------|-------|-------|-----------|-----|
 | Logistic Regression with TF-IDF | 95.7% | 88.3% | 86.2% |   92.4%   | 86% |
 
-
-| Model                           | Train | Val   | Test  | Precision | F1  |
-|---------------------------------|-------|-------|-------|-----------|-----|
-| Logistic Regression with TF-IDF | 95.7% | 88.3% | 86.2% | 92.4%     | 86% |
 
 The top coefficient words for aliens and space are in chronological order.
 
@@ -207,11 +201,9 @@ Test Set
 - It also has a resonable precision (i.e the percent of my predictions were correct) score of 92% for aliens.
 - The test set performed less than the validation set by 2.1%. It means that the results are consistent and good.
 
-+---------------------------------+----------+-------+----------+-------+
 |              Model              | Baseline | Train | Validate |  Test |
-+---------------------------------+----------+-------+----------+-------+
+|---------------------------------|----------|-------|----------|-------|
 | Logistic Regression with TF-IDF |   45%    | 95.7% |  88.3%   | 86.2% |
-+---------------------------------+----------+-------+----------+-------+
 
 * Interpretation of the use of model Logistic Regression TF-IDF.
 
