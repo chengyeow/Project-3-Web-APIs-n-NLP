@@ -22,11 +22,11 @@ Please note that there are 3 files to this project.
 
 
 ### Datasets
-* [`aliens.csv`](./datasets/aliens.csv): aliens set extracted from subreddit r/aliens (1500 posts)
-* [`space.csv`](./datasets/space.csv): space set extracted from subreddit r/space. (1500 posts)
-* [`df.csv`](./datasets/df.csv): df set that combined aliens and space posts (3000 posts in total)
-* [`dfall.csv`](./datasets/dfall.csv): Taken from df.csv, dfall set is after EDA was done.
-* [`dfmaster.csv`](./datasets/dfmaster.csv): Taken from dfall set, dfmaster set is the final set after preprocessing done and to be used for Modeling.
+* [`aliens.csv`](./data/aliens.csv): aliens set extracted from subreddit r/aliens (1500 posts)
+* [`space.csv`](./data/space.csv): space set extracted from subreddit r/space. (1500 posts)
+* [`df.csv`](./data/df.csv): df set that combined aliens and space posts (3000 posts in total)
+* [`dfall.csv`](./data/dfall.csv): Taken from df.csv, dfall set is after EDA was done.
+* [`dfmaster.csv`](./data/dfmaster.csv): Taken from dfall set, dfmaster set is the final set after preprocessing done and to be used for Modeling.
 
 
 ### Data Dictionary
