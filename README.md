@@ -45,11 +45,6 @@ Please note that there are 3 files to this project.
 |is_aliens|int64|dfall, dfmaster|classification of subreddit|
 
 
-**Data Collection**
-**Data Cleaning and EDA**
-**Preprocessing and Modeling**
-**Evaluation and Conceptual Understanding**
-**Conclusion and Recommendations**
 ### Data collection
 * Using [Pushshift's](https://github.com/pushshift/api) API, posts from two subreddits r/space and r/aliens were extracted using Pushshift. As there is an limit per extraction of 100 posts, each retrieval is only 100 post and a for loop created to obtain 1500 posts and built in interval between each retrieval so that the site does not treat this retrieval as a hack.
 
@@ -64,12 +59,15 @@ Please note that there are 3 files to this project.
 * Only selftext column has missing data and it is filled with "" so there is no null data. Wording like [removed] and [deleted] was also noted and removed with "". Lastly, duplicate titles and selftext are also cleaned up.
 
 * For the model to study the words more efficiently, we combined the title and selftext into a single column called text.
-- Histograms of upvote ratio showed the peak at 1.0. However, we will keep the rest of the data as it reflects the other upvote ratio
-- Histogram of score showed the graph stewed to the right. However, we will keep in as it may have significant impact on the results
-- Histogram of num comments showed the graph stewed to the right. However, we will keep in as it may have significant impact on the results
+- Histograms of upvote ratio showed the peak at 1.0. However, we will keep the rest of the data as it reflects the other upvote ratio.
+
+- Histogram of score showed the graph stewed to the right. However, we will keep in as it may have significant impact on the results.
+
+- Histogram of num comments showed the graph stewed to the right. However, we will keep in as it may have significant impact on the results.
+
 - Histogram for text length showed the graph stewed to the right. As this is important, we will examine the outliners and using IQR model to remove the outliners using “maximum”: Q3 + 1.5IQR and “minimum”: Q1 -1.5IQR. We also discovered an obvious outliners after 700 text_length. To keep the distribution proper, data more than 3 std deviation was also removed such as the outliner >700.
 
-* Lastly, a function is created to clean the text for the NLP modeling. The function includes:
+A function is created to clean the text for the NLP modeling. The function includes:
 - make all lowercase
 - remove non-letters
 - remove HTML
@@ -160,11 +158,14 @@ In the ROC curve graph, LogisticRegression TF-IDF/CVEC and Random Forest TF-IDF 
 
 Logistic Regression with TF-IDF was chosen as its validation score has the best accuracy of 88.3%. The diff between train and set is also very close among all the models and it showed the consistency.
 
-+---------------------------------+-------+-------+-------+-----------+-----+
 |              Model              | Train |  Val  |  Test | Precision |  F1 |
-+---------------------------------+-------+-------+-------+-----------+-----+
+|---------------------------------|-------|-------|-------|-----------|-----|
 | Logistic Regression with TF-IDF | 95.7% | 88.3% | 86.2% |   92.4%   | 86% |
-+---------------------------------+-------+-------+-------+-----------+-----+
+
+
+| Model                           | Train | Val   | Test  | Precision | F1  |
+|---------------------------------|-------|-------|-------|-----------|-----|
+| Logistic Regression with TF-IDF | 95.7% | 88.3% | 86.2% | 92.4%     | 86% |
 
 The top coefficient words for aliens and space are in chronological order.
 
@@ -199,7 +200,7 @@ On the misses, many of the incorrect predictions are due to the no meaning posti
 2) alian was spelled wrongly so it is not correctly classified, one posting on alien word posted in space subreddit.
 3) posting with strong correlation like aliens and space are both in the posting,
 
-* Test Set
+Test Set
 - The model has a high mean accuracy score (95.7% for training data) and (86.2% for test data).
 - The mean accuracy score for training is higher than mean accuracy for test data.
 - The model has a consistent high accuracy of 86.2% test and 88.3% for val data.
