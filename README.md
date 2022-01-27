@@ -3,9 +3,14 @@
 
 ## Problem Statement
 
-Men In Black is a association that researches and promotes extraterrestrial knowledge. In recent years, the fans looked out for the information all over the topics with majority of them into the space postings. This resulted in the number of fans dwindled and shifted to space to lookout for extraterrestrial answers. As requested by a company MIB to reddit data science team, they want us to identify the key words that can best capture the attention of aliens fans so as to differentiate itself from space. This would facilitate MIB's marketing effort on social media, events and podcasts.
+Men in Black (MIB) is a secret association that keeps top secret information regarding extraterrestrials under wraps, especially in Area 51. But still, nothing is full proof and things get leaked out.
 
-Therefore, the goal of the project is to discover the key words that best differentiate aliens fans from space fans in reddit posts.
+Some information is leaked out into the internet via reddit, most of which to aliens and space subreddits.
+Instead of completely shutting down reddit, or deleting the subreddit, having a subreddit like aliens would be useful forum for people to channel all discussions there so that MIB to monitor what people are talking these days.
+
+As requested by MIB to reddit data science team, they want us to identify the key words that can best capture the attention of aliens fans so as to differentiate itself from space. This would facilitate MIB's marketing effort on social media, events and podcasts and to certain extent, allows MIB to dictate what topics are trending or stop from further leak.
+
+Therefore, the goal of the project is to discover the key words that best differentiate or predict whether a post  belongs to Aliens or Space Subreddit.
 
 Three classification models, Naive Bayes, Logistic Regression and Random Forest will be developed to assist with the problem statement.
 
