@@ -248,11 +248,20 @@ In summary, MIB can use the recommendations above to better market and so as to 
 
 * Next step forward
 
-A larger dataset will be used to further improve the accuracy. In the future, a larger dataset could be gathered. After EDA cleanig, there are about 1122 aliens posts and 1347 for space. Exploring a larger dataset and different posts dates will help us to better analysis.
+### Future work on our project
 
-More models could be explored, such as catboost, KNN, topic classification and so on. We should continue to look out for new models for better prediction. May be neural networks can be looked into as well.
+- A larger dataset will be used to further improve the accuracy. In the future, a larger dataset could be gathered. After EDA cleaning, there are about 1122 aliens posts and 1347 for space. Exploring a larger dataset and different posts dates will help us to better analysis.
 
-From the stakeholders benefits, they now have a better understanding of the words weightage through word cloud. Future research can combine both qualitative and quantitative methods. Our data science research can be supported by interviews or focus groups. This would allow us to discover more meaning behind our findings. For example, we can invite reputable alien fans to discuss on the keys and its mode. This would help us derive meaning from the fans perspective.
+- More models could be explored, such as catboost, KNN, SVM and so on. We should continue to look out for new models for better prediction. May be neural networks can be looked into as well.
 
-Our model is limited to the corpus of texts obtained from scrapping aliens and space reddit APIs such as pushshift or PRAW. It would be better if the model can learn on its own, constantly update new text. This would allow the model to stay relevant longer.
-Currently, our model only analyse aliens and space texts. In the future, the model can be expanded to include other subreddit related to aliens.
+- From the stakeholders benefits, they now have a better understanding of the words weightage through word cloud. Future research can combine both qualitative and quantitative methods. Our data science research can be supported by interviews or focus groups. This would allow us to discover more meaning behind our findings. For example, we can invite reputable alien fans to discuss on the keys and its mode. This would help us derive meaning from the fans perspective.
+
+- Our model is limited to the corpus of texts obtained from scrapping aliens and space reddit APIs such as pushshift or PRAW. It would be better if the model can learn on its own, constantly update new text. This would allow the model to stay relevant longer.
+
+- We plan to incorporate image analysis, sentiment analysis, and topic modelling as follows:
+
+1) Image analysis is to increase our scope because we understand that a lot of posts have included images but now we are only analysing text.
+
+2) Sentiment analysis can help to gauge whether people are generally feeling positive or negative towards the aliens. Perhaps when the positivity towards aliens has reached certain level, MIB may disclose what they know about aliens.
+
+3) Topic modelling can identify more specifically the topic of each post. MIB will be able to monitor the focus of aliens discussion that may change over time, or may change based on new leaked information. MIB can divert people’s attention by creating news related to these topic on social media, events and podcasts
